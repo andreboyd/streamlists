@@ -72,7 +72,7 @@ const StreamList = () => {
           <li key={index} className="movie-item">
             {item}
             <button className="edit-button" onClick={() => handleEdit(index)} title="Edit">✏️</button>
-            <button className="complete-button" onClick={() => handleComplete(index)} title="Mark as Completed">✅</button>
+            <button className="complete-button" onClick={() => handleComplete(index)} title="Mark As Completed">✅</button>
             <button className="delete-button" onClick={() => handleDelete(index)} title="Delete">❌</button>
           </li>
         ))}
