@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 const StreamList = () => {
   const [input, setInput] = useState("");
   const [list, setList] = useState([]);
+  const [editIndex, setEditIndex] = useState(null);
+  const [completed, setCompleted] = useState([]);
 
   // Load movies from localStorage when the component mounts
   useEffect(() => {
@@ -23,12 +25,15 @@ const StreamList = () => {
 
   const handleAdd = () => {
     if (input.trim() !== "") {
-      const updatedList = [...list, input];
-      setList(updatedList);
+      if (editIndex !== null) {
+        const updatedList = [...list];
+        updatedList[editIndex] = input;
+        setList(updatedList);
+        setEditIndex(null);
+      } else {
+        setList([...list, input]);
+      }
       setInput("");
-
-      // Save immediately to localStorage
-      localStorage.setItem("movieList", JSON.stringify(updatedList));
     }
   };
 
@@ -38,6 +43,16 @@ const StreamList = () => {
 
     // Update localStorage after deletion
     localStorage.setItem("movieList", JSON.stringify(updatedList));
+  };
+
+  const handleEdit = (index) => {
+    setInput(list[index]);
+    setEditIndex(index);
+  };
+
+  const handleComplete = (index) => {
+    setCompleted([...completed, list[index]]);
+    handleDelete(index);
   };
 
   return (
@@ -56,10 +71,13 @@ const StreamList = () => {
         {list.map((item, index) => (
           <li key={index} className="movie-item">
             {item}
-            <button className="delete-button" onClick={() => handleDelete(index)}>❌</button>
+            <button className="edit-button" onClick={() => handleEdit(index)} title="Edit">✏️</button>
+            <button className="complete-button" onClick={() => handleComplete(index)} title="Mark As Completed">✅</button>
+            <button className="delete-button" onClick={() => handleDelete(index)} title="Delete">❌</button>
           </li>
         ))}
       </ul>
+
     </div>
   );
 };

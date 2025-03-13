@@ -40,7 +40,7 @@ button:hover {
   padding: 0;
 }
 
-.movie-item {
+.movie-item,.completed-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +51,7 @@ button:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.delete-button {
+.delete-button,.edit-button, .complete-button {
   background: none;
   border: none;
   font-size: 18px;
