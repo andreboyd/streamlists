@@ -5,6 +5,7 @@ import StreamList from "./Components/StreamList";
 import Movies from "./Components/Movies";
 import Cart from "./Components/Cart";
 import About from "./Components/About";
+import MovieDetails from "./Components/MovieDetails";
 import "./CSS/styles.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/movies" element={<Movies />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </div>
     </Router>

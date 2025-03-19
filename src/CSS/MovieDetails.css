@@ -1,0 +1,30 @@
+.movie-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .movie-details img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .movie-info {
+    text-align: left;
+    max-width: 500px;
+  }
+  
+  .movie-info h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-info p {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
