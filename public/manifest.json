@@ -9,13 +9,27 @@
   "icons": [
     {
       "src": "logo.png",
-      "sizes": "192x192",
+      "sizes": "270x270",
       "type": "image/png"
     },
     {
       "src": "banner.png",
-      "sizes": "512x512",
+      "sizes": "270x270",
       "type": "image/png"
     }
-  ]
+  ],
+  "screenshots": [
+  {
+    "src": "screenshots/screen1.png",
+    "sizes": "1264x642",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "screenshots/screen2.png",
+    "sizes": "583x642",
+    "type": "image/png"
+  }
+]
+
 }
