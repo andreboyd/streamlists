@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../Context/CartContext";
 import "../CSS/MovieDetails.css";  
 
 function MovieDetails() {
   const { id } = useParams();
+  const { addToCart } = useContext(CartContext);
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
@@ -27,6 +29,7 @@ function MovieDetails() {
         <p><strong>Release Date:</strong> {movie.release_date}</p>
         <p><strong>Rating:</strong> {movie.vote_average} / 10</p>
         <p><strong>Overview:</strong> {movie.overview}</p>
+        <button onClick={() => addToCart(movie)}>Add to Cart</button>
       </div>
     </div>
   );

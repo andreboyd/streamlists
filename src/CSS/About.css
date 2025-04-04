@@ -1,0 +1,37 @@
+.about-container {
+    text-align: center;
+  }
+  
+  .banner-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .banner-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .about-content p{
+    text-align: left;
+  }

@@ -24,7 +24,7 @@
 }
 
 .navbar ul li {
-  margin: 0 15px;
+  margin: 0 25px;
   font-size: 22px;
   align-self: center;
 }
@@ -34,7 +34,33 @@
   text-decoration: none;
 }
 
+/* Cart Icon Styling */
+.navbar a {
+  position: relative; /* Ensures badge is positioned relative to the link */
+  display: inline-block;
+}
+
 .navbar a svg {
-    font-size: 34px; 
-  }
+  font-size: 34px;
+}
+
+/* Cart Count Badge */
+.cart-badge {
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1px; /* Moves badge to the top */
+  right: -5px; /* Moves badge to the right */
+  transform: translate(50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 
